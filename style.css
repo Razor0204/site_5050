@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700');
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.nav-link {
+    color: #FFF;
+    transition: all 0.5s;
+}
+
+.navbar-brand {
+    color: #FFF;
+    transition: all 0.5s;
+}
+
+.navbar-brand:hover {
+    color: #FFF;
+}
+
+.landinghome {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    transition: 0.5s;
+    background: url('img/back.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .landinghome {
+      flex-wrap: wrap;
+    }
+  }
+
+.landinghome:after {  
+    content: '';      
+    position: absolute;
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+}
+
+.landinghome .landing {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 1s;
+    z-index: 1;
+}
+
+.landinghome .landing .side {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    transition: 0.5s;
+}
+
+.landinghome .landing .side b{
+   color: #f15;
+   font-weight: 400;
+}
+
+
+.landinghome .landing .side .imgbox {
+    max-width: 80%;
+    user-select: none;
+}
+
+.landinghome .landing .side .imgbox img{
+    z-index: 1;
+    transform: skew(3deg, 3deg);
+    border-radius: 30px;
+    max-width: 80%;
+
+}
+
+.landinghome .landing .side .imgbox:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(315deg,#FF0057, #D61B29);
+    transform: skew(2deg, 2deg);
+    border-radius: 50px;
+}
+
+
+
+.landinghome .landing .side a{
+    display:inline-block;
+    padding: 10px;
+    text-align: center;
+    transition: 0.2s;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border:1px solid #f15;
+    width: 150px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #f15;
+    background: rgba(0, 0, 0, 0.8);
+ }
+
+ .landinghome .landing .side a:hover{
+    text-decoration: none;
+    background: #f15;
+    color: #fff;
+ }
+
+.landing:nth-child(1) {
+    flex-grow: 1;
+    min-width: 50%;
+}
+
+.landing:nth-child(2) {
+    flex-grow: 1;
+    min-width: 50%;
+}
+
+.landingperfil {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.banner:nth-child(1) {
+    background: #f15;
+}
+
+.banner:nth-child(2) {
+    background: #ff5;
+}
+
+.landingperfil .banner {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    transition: 1s;
+}
+
+.landingperfil .banner:hover {
+    flex-grow: 5;
+    transition: 1s;
+}
+
+.landingperfil .banner .side {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    transition: 0.5s;
+}
+
+.landingperfil .banner .side a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 50px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+
+.banner:nth-child(1) {
+    background: #f15;
+}
+
+.banner:nth-child(2) {
+    background: #ff5;
+}
+
+.banner:nth-child(1) .side a {
+    color: #f15;
+    background: #000;
+}
+
+.banner:nth-child(2) .side a {
+    color: #ff5;
+    background: #000;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 10%;
+    background: #FFF;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.content p {
+    font-size: 20px;
+}
+
+.content img {
+    border-radius: 50%;
+    max-width: 80%;
+    max-height: 50%;
+}
+
+.landingperfil .banner .side a:hover~.content, .content:hover {
+    cursor: default;
+    opacity: 1;
+    visibility: visible;
+}
